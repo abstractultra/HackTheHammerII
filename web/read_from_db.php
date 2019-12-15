@@ -6,10 +6,7 @@ $data = $db->query("select * from users");
 $query_result = [];
 
 while ($row = $data->fetch_array()) {
-    //$sleep_score = $row['sleep_score'];
-    $query_result[$row['user_id']] = $query_result[$sleep_score];
-    //$query_result[] = $row;
-    //echo ($row['sleep_score']);
+    $query_result[$row['user_id']] = $row['sleep_score'];
 }
 $json_data = json_encode($query_result);
 
