@@ -4,18 +4,31 @@
         <script src="/socket.io/socket.io.js"></script>
         <script src="jquery-3.4.1.min.js"></script>
         <script>
-            $(function () {
-    var socket = io();
-    $('form').submit(function(e){
-      e.preventDefault(); // prevents page reloading
-      socket.emit('chat message', $('#m').val());
-      $('#m').val('');
-      return false;
-    });
-  });;
+            var socket = io();
+            socket.on('broadcast_0', function(data) {
+                console.log(data.message);
+                document.getElementById("p1").innerHTML = data.message;
+            });
+            socket.on('broadcast_1', function(data) {
+                console.log(data.message);
+                document.getElementById("p2").innerHTML = data.message;
+            });
+            socket.on('broadcast_2', function(data) {
+                console.log(data.message);
+                document.getElementById("p3").innerHTML = data.message;
+            });
+            socket.on('broadcast_3', function(data) {
+                console.log(data.message);
+                document.getElementById("p4").innerHTML = data.message;
+            });
         </script>
     </head>
     <body>
-
+        <div id = "content_box">
+            <h3>Person 1</h3> <p id="p1"></p> <br>
+            <h3>Person 2</h3> <p id="p2"></p> <br>
+            <h3>Person 3</h3> <p id="p3"></p> <br>
+            <h3>Person 4</h3> <p id="p4"></p> <br>
+        </div>
     </body>
 </html>
