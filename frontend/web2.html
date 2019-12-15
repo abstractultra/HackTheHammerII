@@ -1,0 +1,154 @@
+<!Doctype html>
+<html>
+
+<script>
+    function percent3() {
+        document.getElementById("abc").innerHTML = "cba";
+        var price = 3;
+    }
+</script>
+
+
+
+<style>
+    body {
+        background-image: url("https://cdn.discordapp.com/attachments/654474187662032927/655554140851929108/clouds.png");
+        font-family: 'Source Sans Pro', sans-serif;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .graph-cont {
+
+        width: calc(100% - 40px);
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .top {
+        position:fixed;
+        margin-top: 50px;
+        left: 0px;
+        top: 0px;
+        width: 55px;
+        height: 40px;
+        border: 2px solid black;
+        padding: 10px;
+        background-color: #D9FCFF;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    h1 {
+        text-align: center;
+        color: black;
+        background-color: #D9FCFF;
+        margin-top: 50px;
+        padding: 20px;
+        border-bottom-right-radius: 2000px;
+        border-bottom-left-radius: 2000px;
+    }
+
+    h2 {
+        display: inline-block;
+        text-align: left;
+        margin-top: 15px;
+        padding: 4px;
+        background-color: white;
+        border-radius: 8px;
+    }
+
+    .bar {
+        height: 30px;
+        max-width: 800px;
+        margin: 0 auto 10px auto;
+        line-height: 30px;
+        font-size: 16px;
+        color: white;
+        padding: 0 0 0 10px;
+        position: relative;
+    }
+
+    .bar::before {
+        content: '';
+        width: 100%;
+        position: absolute;
+        left: 0;
+        height: 30px;
+        top: 0;
+        z-index: -2;
+        background: #D9FCFF;
+        border: 2.5px solid black;
+        border-radius: 500px;
+    }
+
+    .bar::after {
+        content: '';
+        background: black;
+        height: 30px;
+        transition: 0.7s;
+        display: block;
+        width: 100%;
+        -webkit-animation: bar-before 1 1.8s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border: 2.5px solid black;
+        border-radius: 500px;
+    }
+
+    .bar1::after {
+        max-width: 60%;
+    }
+
+    .bar2::after {
+        max-width: 72%;
+    }
+
+    .bar3::after {
+        max-width: var(percent3);
+    }
+
+    .bar4::after {
+        max-width: 99%;
+    }
+
+    @-webkit-keyframes bar-before {
+        0% {
+            width: 0px;
+        }
+
+        100% {
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <div class="graph-cont">
+        <strong>
+
+            <div class="top">
+
+                <h3><a href="file:///C:/Users/dbryc/OneDrive/Desktop/web2ndpage.html">About</a></h3>
+            </div>
+            <h1>Wakeful Watch</h1>
+            <h2>Person 1</h2>
+            <div class="bar bar1">0%</div>
+            <h2>Person 2</h2>
+            <div class="bar bar2">0%</div>
+            <h2>Person 3</h2>
+            <div class="bar bar3">0%</div>
+            <h2>Person 4</h2>
+            <div class="bar bar4">0%</div>
+    </div>
+    </strong>
+
+</body>
+
+
+
+</html>
