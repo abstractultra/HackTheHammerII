@@ -1,0 +1,146 @@
+<!Doctype html>
+<html>
+
+<script>
+    function percent3() {
+        document.getElementById("bar bar1").innerHTML = "10%";
+        return "10%";
+    }
+</script>
+
+
+
+<style>
+    body {
+        background-image: url("https://cdn.discordapp.com/attachments/654474187662032927/655554140851929108/clouds.png");
+        font-family: 'Source Sans Pro', sans-serif;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .graph-cont {
+        position:fixed;
+        margin-top: 50px;
+        left: 475px;
+        top: -17.5px;
+        width: 600px;
+        height: 650px;
+        border: 2px solid black;
+        padding: 10px;
+        background-color: #D9FCFF;
+        border-radius: 50px;
+    }
+
+      
+    h1 {
+        
+        position: absolute;
+        left: 10px;
+        top: -5px;
+        margin-top: 50px;
+        padding: 20px;
+    }
+
+    
+
+    h2 {
+        position: absolute;
+        left: 650px;
+        top: 60px;
+        margin-top: 50px;
+        padding: 20px;
+    }
+    h3 {
+        position: absolute;
+        left: -465px;
+        top: 120px;
+        margin-top: 50px;
+        padding: 20px;
+    }
+
+    .bar {
+        height: 30px;
+        max-width: 800px;
+        margin: 0 auto 10px auto;
+        line-height: 30px;
+        font-size: 16px;
+        color: white;
+        padding: 0 0 0 10px;
+        position: relative;
+    }
+
+    .bar::before {
+        content: '';
+        width: 100%;
+        position: absolute;
+        left: 0;
+        height: 30px;
+        top: 0;
+        z-index: -2;
+        background: #D9FCFF;
+        border: 2.5px solid black;
+        border-radius: 500px;
+    }
+
+    .bar::after {
+        content: '';
+        background: black;
+        height: 30px;
+        transition: 0.7s;
+        display: block;
+        width: 100%;
+        -webkit-animation: bar-before 1 1.8s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border: 2.5px solid black;
+        border-radius: 500px;
+    }
+
+    .bar1::after {
+        max-width: 60%;
+    }
+
+    .bar2::after {
+        max-width: 72%;
+    }
+
+    .bar3::after {
+        max-width: var(percent3);
+    }
+
+    .bar4::after {
+        max-width: 99%;
+    }
+
+    @-webkit-keyframes bar-before {
+        0% {
+            width: 0px;
+        }
+
+        100% {
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <div class="graph-cont">
+        <strong>
+
+            <div class="top">
+
+            </div>
+            <h1>Welcome to our sleep schedule organization program! We hope to be able to aid you in the creation of a healthy group sleep schedule!  Some Information about the creators: we are a team of four highschool students, and this program was made in 24 hours between 14/12/2019 to 15/12/2019 at Hack the Hammer Hackathon in Hamilton ON, in Canada. If you ever want to use any part of this prgram, the link to the github repository is [insert Github repository link] </h1>
+           <h2> <img src="https://cdn.discordapp.com/attachments/655501124446453840/655573730474590218/IMG_20191214_195516.jpg"alt="The Team Working on Wakeful Watch"width="340" height="400"></h2>
+          <h3><img src="https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_thumbnail_photos/000/903/938/datas/medium.png"alt="Hack The Hammer"width="400" height="250"></h3>
+        </div>
+    </strong>
+
+</body>
+
+
+
+</html>
